@@ -22,6 +22,7 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
+@import '~@/assets/styles/mixins.styl'
 .item
   text-align : left
   .item_img

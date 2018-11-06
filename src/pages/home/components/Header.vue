@@ -10,10 +10,12 @@
         <span class="iconfont seach">&#xe609;</span>
         <span>输入城市/景点/游玩主题</span>
       </div>
-      <div class="header_right">
-        上海
-        <span class="iconfont">&#xeb6d;</span>
-      </div>
+      <router-link to="/city">
+        <div class="header_right">
+          上海
+          <span class="iconfont">&#xeb6d;</span>
+        </div>
+      </router-link>
     </div>
   </div>
 </template>
