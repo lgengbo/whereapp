@@ -10,7 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    // 为了模拟数据而不影响上线时路径问题,这个功能是webpack-dev-sercer提供的
+    proxyTable: {
+      '/api':{
+        target: 'http://localhost:8080',
+        pathRewrite: {
+        '^/api':'/static/mock'
+        }
+    }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

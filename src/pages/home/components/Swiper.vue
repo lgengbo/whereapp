@@ -1,12 +1,9 @@
 <template>
     <div class="broadcast">
-      <swiper :options="swiperOption" ref="mySwiper">
-        <!-- slides -->
-        <swiper-slide><img src="//img1.qunarzz.com/piao/fusion/1807/d5/fe8867e329175202.jpg_750x200_98799354.jpg" alt="图片" class="swiper-img"></swiper-slide>
-        <swiper-slide><img src="http://img1.qunarzz.com/piao/fusion/1807/22/382624cbe97b0502.jpg_750x200_36a074d6.jpg" alt="图片" class="swiper-img"></swiper-slide>
-        <swiper-slide><img src="http://img1.qunarzz.com/piao/fusion/1807/d5/fe8867e329175202.jpg_750x200_98799354.jpg" alt="图片" class="swiper-img"></swiper-slide>
-        <swiper-slide><img src="http://img1.qunarzz.com/piao/fusion/1807/29/6a13907ab0f9bf02.jpg_750x200_452cfebe.jpg" alt="图片" class="swiper-img"></swiper-slide>
-          <!-- Optional controls -->
+      <!-- list.length值不为0的时候才创建轮播 防止轮播图第一次不是显示第一张  -->
+      <swiper :options="swiperOption" ref="mySwiper" v-if="showSwiper">
+        <!-- 循环数据 -->
+        <swiper-slide v-for="item of list" :key="item.id"><img :src="item.imgUrl" alt="图片" class="swiper-img"></swiper-slide>
         <div class="swiper-pagination"  slot="pagination"></div>
       </swiper>
     </div>
@@ -14,6 +11,9 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    list: Array
+  },
   data () {
     return {
       swiperOption: {
@@ -24,6 +24,12 @@ export default {
         // 解决swiper手动改滑动之后，不再自动滑动了
         autoplayDisableOnInteraction: false
       }
+    }
+  },
+  computed: {
+    showSwiper () {
+      // <!-- list.length值不为0的时候才创建轮播 -->
+      return this.list.length
     }
   }
 }
