@@ -1,0 +1,107 @@
+{
+  "ret": true,
+  "data": {
+    "city": "南京",
+    "swiperList": [{
+        "id": "0001",
+        "imgUrl": "//img1.qunarzz.com/piao/fusion/1807/c6/44fce1467be17702.jpg_750x200_406f5fc3.jpg"
+      },{
+        "id": "0002",
+        "imgUrl": "//img1.qunarzz.com/piao/fusion/1807/22/382624cbe97b0502.jpg_750x200_36a074d6.jpg"
+      },{
+        "id": "0003",
+        "imgUrl": "//img1.qunarzz.com/piao/fusion/1807/d5/fe8867e329175202.jpg_750x200_98799354.jpg"
+      },{
+        "id": "0004",
+        "imgUrl": "//img1.qunarzz.com/piao/fusion/1807/29/6a13907ab0f9bf02.jpg_750x200_452cfebe.jpg"
+      }],
+    "iconList": [{
+        "id": "0001",
+        "imgUrl": "//img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+        "desc": "景点门票"
+      }, {
+        "id": "0002",
+        "imgUrl": "//img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png",
+        "desc": "文化古迹"
+      }, {
+        "id": "0003",
+        "imgUrl": "//img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png",
+        "desc": "自然风光"
+      }, {
+        "id": "0004",
+        "imgUrl": "//img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png",
+        "desc": "游乐场"
+      }, {
+        "id": "0005",
+        "imgUrl": "//img1.qunarzz.com/piao/fusion/1803/6a/45f595250c73d102.png",
+        "desc": "夏日玩水"
+      }, {
+        "id": "0006",
+        "imgUrl": "//img1.qunarzz.com/piao/fusion/1803/c1/6f15f887179fa002.png",
+        "desc": "夫子庙"
+      }, {
+        "id": "0007",
+        "imgUrl": "//img1.qunarzz.com/piao/fusion/1803/fa/2548667cb6e902.png",
+        "desc": "总统府"
+      }, {
+        "id": "0008",
+        "imgUrl": "//img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png",
+        "desc": "中山陵"
+      }, {
+        "id": "0008",
+        "imgUrl": "//img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png",
+        "desc": "万达主题乐园"
+      }, {
+        "id": "0009",
+        "imgUrl": "//img1.qunarzz.com/piao/fusion/1803/97/02f5043b51b2102.png",
+        "desc": "牛首山"
+      }],
+    "recommendList": [{
+        "id": "0001",
+        "imgUrl": "//img1.qunarzz.com/sight/p0/201406/04/4f597aad25208a233999238c65af9b06.jpg_200x200_d1ea2bd2.jpg",
+        "title": "南京珍珠泉水上世界",
+        "desc": "高品质天然泉水水上乐园"
+      }, {
+        "id": "0002",
+        "imgUrl": "//img1.qunarzz.com/sight/p0/1805/9b/9b3cbcf2624bf8cea3.img.jpg_200x200_075bc9ef.jpg",
+        "title": "弘阳未来世界主题乐园",
+        "desc": "带你快乐一夏天"
+      }, {
+        "id": "0003",
+        "imgUrl": "//img1.qunarzz.com/sight/p0/1411/b3/1415e635014967c75a3d955ae256a628.water.jpg_200x200_54ee590f.jpg",
+        "title": "南京汤山一号温泉",
+        "desc": "南京本月收藏Top5╰(￣▽￣)╭"
+      }, {
+        "id": "0004",
+        "imgUrl": "//img1.qunarzz.com/sight/p0/1703/58/589f52a494f307d3a3.water.jpg_200x200_71b77fd4.jpg",
+        "title": "巴布洛生态谷",
+        "desc": "健康生活之门为你打开"
+      }, {
+        "id": "0005",
+        "imgUrl": "//img1.qunarzz.com/sight/p0/1504/15/1530936526074f62.water.jpg_200x200_fb55ee43.jpg",
+        "title": "六朝博物馆",
+        "desc": "研究六朝历史文化的专题博物馆"
+      }],
+    "weekendList": [{
+        "id": "0001",
+        "imgUrl": "//img1.qunarzz.com/sight/source/1505/f3/d51669250308cc.jpg_r_640x214_7a127cd0.jpg",
+        "title": "秦淮金粉里的南京",
+        "desc": "六朝金粉，处处诉说着南京的历史"
+      }, {
+        "id": "0002",
+        "imgUrl": "//img1.qunarzz.com/sight/source/1505/f1/ae9d4299b8aaea.jpg_r_640x214_0c555905.jpg",
+        "title": "南京必游TOP10",
+        "desc": "看尽王侯将相荣辱成败，六朝金粉潮起潮落"
+      }, {
+        "id": "0003",
+        "imgUrl": "//img1.qunarzz.com/sight/source/1505/e1/cdbf56d837da59.jpg_r_640x214_105fc3f2.jpg",
+        "title": "民国情怀国共风华",
+        "desc": "找到你心中想要的那个民国时期的南京"
+      }, {
+        "id": "0004",
+        "imgUrl": "//img1.qunarzz.com/sight/source/1505/ed/8bce72632c9136.jpg_r_640x214_221c04c6.jpg",
+        "title": "孩子的游玩地",
+        "desc": "让小朋友们欢脱起来"
+      }]
+  }
+}

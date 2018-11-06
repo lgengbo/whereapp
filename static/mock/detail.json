@@ -1,0 +1,25 @@
+{
+  "ret": true,
+  "data": {
+    "sightName": "夫子庙秦淮河游船",
+    "bannerImg": "//img1.qunarzz.com/sight/p0/1507/a3/a37ced8252b273c9.img.jpg_600x330_d7e04f5c.jpg",
+    "gallaryImgs": ["//img1.qunarzz.com/sight/p0/1507/a3/a37ced8252b273c9.img.jpg_600x330_d7e04f5c.jpg", "//img1.qunarzz.com/sight/p0/1507/c5/c5bf379142fcd62c.img.jpg_r_800x800_1767618a.jpg", "http://img1.qunarzz.com/sight/p0/1507/43/43e4a23f921b8b0a.img.jpg_r_800x800_05f77565.jpg","http://img1.qunarzz.com/sight/p0/1507/11/111287098a524223.img.jpg_r_800x800_c9e05004.jpg"],
+    "categoryList": [{
+        "title": "成人票",
+        "children": [{
+          "title": "成人三馆联票",
+          "children": [{
+            "title": "成人三馆联票 - 某一连锁店销售"
+          }]
+        },{
+          "title": "成人五馆联票"
+        }]
+      }, {
+        "title": "学生票"
+      }, {
+        "title": "儿童票"
+      }, {
+        "title": "特惠票"
+      }]
+  }
+}
