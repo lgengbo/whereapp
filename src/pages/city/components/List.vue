@@ -12,9 +12,17 @@
         <div class="area">
           <div class="title">热门城市</div>
           <div class="btn_list">
-            <div class="btn_wrap" v-for="item of list" :key="item.id">
+            <div class="btn_wrap" v-for="item of hot" :key="item.id">
               <div class="btn">{{item.name}}</div>
             </div>
+          </div>
+        </div>
+        <!-- v-for="(cityList,key) of cities"  得到cityList中key字母-->
+        <div class="area" v-for="(cityList,key) of cities" :key="cityList.id">
+          <div class="title">{{key}}</div>
+          <!-- v-for="innerItem of cityList" 变量对应字母的数据 -->
+          <div class="city_list" v-for="innerItem of cityList" :key="innerItem.id">
+            <div class="city_item border-bottom">{{innerItem.name}}</div>
           </div>
         </div>
       </div>
@@ -25,7 +33,8 @@
 export default {
   name: 'HomeHearch',
   props: {
-    list: Array
+    hot: Array,
+    cities: Object
   },
   data () {
     return {}
@@ -55,4 +64,8 @@ export default {
       border: 0.02rem solid #ccc
       border-radius: 0.06rem
       font-size: 0.26rem
+.city_item
+  line-height: 0.72rem;
+  padding-left: 0.2rem;
+  text-align: left;
 </style>

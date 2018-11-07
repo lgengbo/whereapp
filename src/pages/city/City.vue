@@ -2,7 +2,10 @@
     <div class="w">
       <city-header></city-header>
       <city-search></city-search>
-      <city-list :list="hotCities"></city-list>
+      <city-list
+      :hot="hotCities"
+      :cities="cities">
+      </city-list>
     </div>
 </template>
 
@@ -15,7 +18,8 @@ export default {
   name: 'HomeCity',
   data () {
     return {
-      hotCities: []
+      hotCities: [],
+      cities: {}
     }
   },
   components: {
@@ -32,6 +36,7 @@ export default {
       if (resData.ret && resData.data) {
         const data = resData.data
         this.hotCities = data.hotCities
+        this.cities = data.cities
       }
     }
   },

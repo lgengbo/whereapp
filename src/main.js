@@ -7,6 +7,7 @@ import router from './router'
 import './assets/styles/reset.css'
 // 1像素边框解决方案
 import './assets/styles/border.css'
+// 引入图标样式
 import './assets/styles/iconfont.css'
 // 部分浏览器300毫秒点击延迟
 import fastclick from 'fastclick'
