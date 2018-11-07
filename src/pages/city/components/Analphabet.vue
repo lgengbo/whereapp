@@ -68,7 +68,6 @@ export default {
   }
 }
 </script>
-
 <style lang="stylus" scoped>
 @import '~@/assets/styles/mixins.styl'
 @import '~styles/varibles.styl'
