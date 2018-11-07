@@ -38,6 +38,7 @@ export default {
     .header_left
       float : left
       width: .64rem
+      color: #fff
     .header_input
       flex : 1
       height: .64rem;

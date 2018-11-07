@@ -1,15 +1,17 @@
 <template>
     <div class="header">
       城市选择
+    <router-link to="/">
       <a href="javacript:void()">
         <span class="iconfont back">&#xe624;</span>
       </a>
+    </router-link>
     </div>
 </template>
 
 <script>
 export default {
-  name: 'HomeCity',
+  name: 'HomeHearch',
   data () {
     return {}
   }
@@ -25,8 +27,8 @@ export default {
   line-height: 0.86rem
   background: #00bcd4
   text-align: center
-  color: #fff
   font-size: 0.4rem
+  color: #fff
   .back
     position: absolute
     top: 0
