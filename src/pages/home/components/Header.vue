@@ -12,7 +12,8 @@
       </div>
       <router-link to="/city">
         <div class="header_right">
-          上海
+          <!-- 通过vuex取值 -->
+          {{this.$store.state.city}}
           <span class="iconfont">&#xeb6d;</span>
         </div>
       </router-link>

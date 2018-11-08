@@ -43,6 +43,7 @@ export default {
     },
     getHomeInfoSucc (res) {
       res = res.data
+      // 数据传值
       if (res.ret && res.data) {
         const data = res.data
         this.swiperList = data.swiperList
@@ -52,9 +53,12 @@ export default {
       }
     }
   },
-  mounted () {
-    this.lastCity = this.city
-    this.getHomeInfo()
+  // activated 页面可见时触发 mounted 只触发一次
+  activated () {
+    if (this.lastCity !== this.city) {
+      this.lastCity = this.city
+      this.getHomeInfo()
+    }
   }
 }
 </script>

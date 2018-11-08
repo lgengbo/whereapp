@@ -5,7 +5,7 @@
           <div class="title">当前城市</div>
           <div class="btn_list">
             <div class="btn_wrap">
-              <div class="btn">上海</div>
+              <div class="btn">{{this.city}}</div>
             </div>
           </div>
         </div>
@@ -13,7 +13,7 @@
           <div class="title">热门城市</div>
           <div class="btn_list">
             <div class="btn_wrap" v-for="item of hot" :key="item.id">
-              <div class="btn">{{item.name}}</div>
+              <div class="btn" @click="handleCityClick(item.name)">{{item.name}}</div>
             </div>
           </div>
         </div>
@@ -32,6 +32,8 @@
 <script>
 // 引入better-scroll插件
 import Bscroll from 'better-scroll'
+// vuex高级用法
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'HomeHearch',
   props: {
@@ -42,12 +44,13 @@ export default {
   data () {
     return {}
   },
+  computed: {
+    ...mapState(['city'])
+  },
   mounted () {
     // 使用滚动插件
     const options = {
       // 处理在better-scroll在安卓手机上不能点击的问题
-      // 更多配置见
-      // https://ustbhuangyi.github.io/better-scroll/doc/zh-hans/options.html#click
       click: true,
       tap: true
     }
@@ -65,7 +68,15 @@ export default {
     }
   },
   methods: {
-    handleCityClick (cityName) {}
+    handleCityClick (cityName) {
+      // 直接修改commit 对应到index.js的actions
+      // this.$store.commit('toChangeCity', cityName)
+      this.toChangeCity(cityName)
+      // vue router编程式的导航 点击完条船到路由为/的页面
+      this.$router.push('/')
+    },
+    // 这样this.$store.commit('changeCity',city)可以改写成：this.changeCity(city)
+    ...mapMutations(['toChangeCity'])
   }
 }
 </script>
@@ -93,14 +104,15 @@ export default {
           border-radius: 0.06rem
           font-size: 0.26rem
     .city_item
-      line-height: 0.72rem;
-      padding-left: 0.2rem;
-      text-align: left;
+      line-height: 0.72rem
+      padding-left: 0.2rem
+      text-align: left
   .list
     overflow: hidden
     position: absolute
-    width: 100%;
+    width: 100%
     top: 1.58rem
     bottom: 0
     max-width: 13rem
+    touch-action: none
 </style>

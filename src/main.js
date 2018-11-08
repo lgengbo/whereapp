@@ -14,6 +14,8 @@ import fastclick from 'fastclick'
 // 引入swiper插件
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
+// 引入vuex
+import store from './store'
 Vue.use(VueAwesomeSwiper)
 Vue.config.productionTip = false
 // 300毫秒点击延迟
@@ -23,6 +25,8 @@ fastclick.attach(document.body)
 new Vue({
   el: '#app',
   router,
+  // 注册vuex
+  store,
   components: { App },
   template: '<App/>'
 })
