@@ -45,6 +45,9 @@ export default {
       // 微信中处理 向上滑动时整个页面跟随滚动的问题
       e.preventDefault()
       if (this.touchstatus) {
+        if (this.timer) {
+          clearTimeout(this.timer)
+        }
         // 节流优化
         this.times = setTimeout(() => {
           // touches中获取才可以在单指操作中，event.touches[0] 获取单指的Y值

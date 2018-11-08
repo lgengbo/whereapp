@@ -11,12 +11,10 @@ import './assets/styles/border.css'
 import './assets/styles/iconfont.css'
 // 部分浏览器300毫秒点击延迟
 import fastclick from 'fastclick'
-
 // 引入swiper插件
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper)
-
 Vue.config.productionTip = false
 // 300毫秒点击延迟
 fastclick.attach(document.body)
