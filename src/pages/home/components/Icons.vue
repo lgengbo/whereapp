@@ -4,7 +4,7 @@
         <!-- slides -->
         <swiper-slide class="icon" v-for="(page, index) of pages" :key="index">
           <ul class="icon_img">
-            <li class="icon_item" v-for="item of page" :key="item.id"><a href="javascrpt:void()"><img :src='item.imgUrl' alt="图片" class="swiper_img"></a><span class="icon_text">{{item.desc}}</span></li>
+              <router-link to="detail" tag="li" class="icon_item" v-for="item of page" :key="item.id"><a href="javascrpt:void()"><img :src='item.imgUrl' alt="图片" class="swiper_img"></a><span class="icon_text">{{item.desc}}</span></router-link>
           </ul>
           </swiper-slide>
           <swiper-slide></swiper-slide>

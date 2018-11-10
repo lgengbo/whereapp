@@ -16,6 +16,8 @@
 
 <script>
 import Bscroll from 'better-scroll'
+// vuex字符映射
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'HomeSearch',
   props: {
@@ -31,15 +33,20 @@ export default {
     }
   },
   methods: {
-    handleCityClick (city) {
+    handleCityClick (cityName) {
       this.keyword = ''
-    }
+      this.toChangeCity(cityName)
+      // vue router编程式的导航 点击完条船到路由为/的页面
+      this.$router.push('/')
+    },
+    ...mapMutations(['toChangeCity'])
   },
   computed: {
     // 判断没有匹配到值得时候,show
     hasNoData () {
       return !this.list.length
-    }
+    },
+    ...mapState(['city'])
   },
   // 监听keyword的变化
   watch: {
