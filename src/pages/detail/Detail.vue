@@ -2,6 +2,7 @@
     <div class="w">
       <detail-header></detail-header>
       <detail-banner :sightName="sightName" :bannerImg="bannerImg" :gallaryImgs="gallaryImgs"></detail-banner>
+      <div class="content"></div>
     </div>
 </template>
 
@@ -46,8 +47,10 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~@/assets/styles/mixins.styl'
-.w{
-    max-width: 13rem;/*移动端650px,并且最好使用max-width*/
-    margin: 0 auto;
-  }
+.w
+  //  13rem;/*移动端650px,并且最好使用max-width*/
+  max-width: 13rem
+  margin: 0 auto
+  .content
+    height: 50rem
 </style>

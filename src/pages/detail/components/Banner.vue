@@ -2,9 +2,9 @@
     <div>
       <div class="banner">
         <img :src="bannerImg" alt="横幅" @click="handleBannerClick" class="banner_img">
-        <router-link tag="div" to="/" class="back_wrap">
+        <!-- <router-link tag="div" to="/" class="back_wrap">
           <div class="iconfont banner_back">&#xe624;</div>
-        </router-link>
+        </router-link> -->
         <div class="banner_info">
           <div class="banner_title">{{sightName}}</div>
           <div class="banner_number">
