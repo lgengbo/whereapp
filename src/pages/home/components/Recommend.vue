@@ -3,7 +3,8 @@
     <div class="title">热销推荐</div>
     <ul>
       <!-- 替换li标签   tag="li"映射为li标签 -->
-      <router-link to="/detail" tag="li" v-for="item of list" :key="item.id" class="item" >
+     <!--  ：to 配合动态路由-->
+      <router-link :to="'/detail/'+ item.id"  tag="li" v-for="item of list" :key="item.id" class="item" >
           <img :src='item.imgUrl' alt="推荐" class="item_img">
           <div class="item_info">
             <p class="item_title">{{item.title}}</p>

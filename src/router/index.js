@@ -20,7 +20,8 @@ export default new Router({
       component: City
     },
     {
-      path: '/detail',
+      // 动态获取路由
+      path: '/detail/:id',
       name: 'detail',
       component: Detail
     }

@@ -13,6 +13,7 @@ import DetailBanner from './components/Banner'
 import DetailList from './components/List'
 import axios from 'axios'
 export default {
+  name: 'Detail',
   data () {
     return {
       sightName: '',
@@ -29,7 +30,9 @@ export default {
   methods: {
     // axios传值
     getDetailInfo () {
-      axios.get('/api/detail.json').then(this.getCityInfoSucc)
+      // 获取路由参数并传参给接口
+      axios.get('/api/detail.json?id=' + this.$route.params.id).then(this.getCityInfoSucc)
+      // axios.get('/api/detail.json').then(this.getCityInfoSucc)
     },
     getCityInfoSucc (res) {
       const resData = res.data
@@ -42,6 +45,7 @@ export default {
       }
     }
   },
+  // 获取信息
   mounted () {
     this.getDetailInfo()
   }
