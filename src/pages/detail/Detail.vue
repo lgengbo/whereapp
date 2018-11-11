@@ -2,6 +2,7 @@
     <div class="w">
       <detail-header></detail-header>
       <detail-banner :sightName="sightName" :bannerImg="bannerImg" :gallaryImgs="gallaryImgs"></detail-banner>
+      <detail-list :categoryList="categoryList"></detail-list>
       <div class="content"></div>
     </div>
 </template>
@@ -9,6 +10,7 @@
 <script>
 import DetailHeader from './components/Header'
 import DetailBanner from './components/Banner'
+import DetailList from './components/List'
 import axios from 'axios'
 export default {
   data () {
@@ -21,7 +23,8 @@ export default {
   },
   components: {
     DetailHeader,
-    DetailBanner
+    DetailBanner,
+    DetailList
   },
   methods: {
     // axios传值
