@@ -11,13 +11,16 @@
             <span class="iconfont banner_icon">&#xe608;</span>&nbsp;4
           </div>
         </div>
-        <common-gallary :imgs="gallaryImgs" v-show="ShowGallary" @hallaryclose="handleGlallayColse"></common-gallary>
+        <common-fade>
+          <common-gallary :imgs="gallaryImgs" v-show="ShowGallary" @hallaryclose="handleGlallayColse"></common-gallary>
+        </common-fade>
       </div>
     </div>
 </template>
 
 <script>
 import CommonGallary from '../../../common/gallary/Gallary'
+import CommonFade from '../../../common/fade/FadeAnimation'
 export default {
   name: 'DetailBanner',
   props: {
@@ -33,7 +36,8 @@ export default {
     }
   },
   components: {
-    CommonGallary
+    CommonGallary,
+    CommonFade
   },
   methods: {
     // 隐藏画廊

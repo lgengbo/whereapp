@@ -1,13 +1,15 @@
 <template>
     <div class="broadcast">
-      <swiper :options="swiperOption" ref="mySwiper">
+      <swiper :options="swiperOption" ref="mySwiper" v-if="showIcons">
         <!-- slides -->
-        <swiper-slide class="icon" v-for="(page, index) of pages" :key="index">
-          <ul class="icon_img">
-              <router-link to="detail" tag="li" class="icon_item" v-for="item of page" :key="item.id"><a href="javascrpt:void()"><img :src='item.imgUrl' alt="图片" class="swiper_img"></a><span class="icon_text">{{item.desc}}</span></router-link>
-          </ul>
+        <swiper-slide class="icons" v-for="(page, index) of pages" :key="index">
+         <div class="icon" v-for="item of page" :key="item.id">
+                <div class="icon-img">
+                  <img class="icon-image-content" :src='item.imgUrl'/>
+                </div>
+                <p class="icon-desc">{{item.desc}}</p>
+            </div>
           </swiper-slide>
-          <swiper-slide></swiper-slide>
       </swiper>
     </div>
 </template>
@@ -32,7 +34,9 @@ export default {
     // 解决分页
     pages () {
       const pages = []
+      // 循环 item, index 是循环项和循环下标
       this.list.forEach((item, index) => {
+        // 数据显示在哪一页,如果index到9就是取1一个显示在第二页
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []
@@ -40,6 +44,10 @@ export default {
         pages[page].push(item)
       })
       return pages
+    },
+    showIcons () {
+      // <!-- list.length值不为0的时候才创建Icons -->
+      return this.list.length
     }
   }
 }
@@ -47,23 +55,47 @@ export default {
 </script>
 <style lang="stylus" scoped>
 @import '~@/assets/styles/mixins.styl'
-    .icon_img
-      display : flex
-      margin-top: 0.1rem;
-      flex-wrap : wrap
-      overflow: hidden
-      height: 0
-      padding-bottom: 50%
-      .icon_item
-        display : flex
-        background : #fff
-        flex-direction : column
-        box-sizing : border-box
-        padding-top : 0.2rem
-        width : 25%
-        .swiper_img
-          width : 74%
-        .icon_text
-          // 防止文字溢出
-          ellipsis()
+    //处理高度滑动，在下面就可以左滑右滑
+.icons >>> .swiper-container {
+    height: 0;
+    padding-bottom: 50%;
+}
+
+.icons {
+    margin-top: 0.1rem;
+    .icon {
+        position: relative;
+        overflow: hidden;
+        float: left;
+        height: 0;
+        width: 25%;
+        padding-bottom: 25%;
+        .icon-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0.44rem;
+            box-sizing: border-box;
+            paddiong: 0.1rem;
+            .icon-image-content {
+                display: block;
+                margin: 0 auto;
+                height: 100%;
+            }
+        }
+        .icon-desc {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 0.44rem;
+            line-height: 0.44rem;
+            text-align: center;
+            color: $darkTextColor;
+            //超出文字显示...
+            ellipsis();
+        }
+    }
+}
 </style>

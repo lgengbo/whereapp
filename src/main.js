@@ -16,11 +16,12 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 // 引入vuex
 import store from './store'
+// 解决Android手机浏览器兼容问题
+import 'babel-polyfill'
+fastclick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
 Vue.config.productionTip = false
 // 300毫秒点击延迟
-fastclick.attach(document.body)
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

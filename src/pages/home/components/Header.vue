@@ -7,8 +7,8 @@
       </div>
       <!-- 搜索框 -->
       <div class="header_input">
-        <span class="iconfont seach">&#xe609;</span>
-        <span>输入城市/景点/游玩主题</span>
+        <input type="text" name="search" class="search" placeholder="输入城市/景点/游玩主题">
+        <span class="iconfont seach_icon">&#xe609;</span>
       </div>
       <router-link to="/city">
         <div class="header_right">
@@ -43,7 +43,8 @@ export default {
     .header_input
       flex : 1
       height: .64rem;
-      padding-left: 0.2rem;
+      position: relative
+      padding-left: 0.2rem
       margin-top: 0.12rem
       margin-left: 0.08rem
       text-align: left
@@ -51,10 +52,17 @@ export default {
       border-radius : .1rem
       line-height .64rem
       color : #ccc
+      .search
+        width: 80%
+        padding-left: .5rem
+        color: #666
+      .seach_icon
+        position: absolute
+        left: .2rem
     .header_right
-      min-width: 1.04rem;
-      padding: 0 0.1rem;
-      float: right;
-      text-align: center;
-      color: #fff;
+      min-width: 1.04rem
+      padding: 0 0.1rem
+      float: right
+      text-align: center
+      color: #fff
 </style>

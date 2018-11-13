@@ -1,7 +1,8 @@
 <template>
     <div>
         <ul class="list">
-          <li v-for="letterItem of letters" :key="letterItem" :ref="letterItem" class="item" @click="handleLetterClick" @touchstart="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd">{{letterItem}}</li>
+          <!-- @touchstart.prevent 白屏，拉动字母顶部出现白屏： 阻止默认行为 -->
+          <li v-for="letterItem of letters" :key="letterItem" :ref="letterItem" class="item" @click="handleLetterClick" @touchstart.prevent="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd">{{letterItem}}</li>
         </ul>
     </div>
 </template>
